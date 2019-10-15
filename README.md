@@ -6,7 +6,7 @@ import AVFoundation
 
 var player : AVAudioPlayer!
 
-let url = Bundle.main.url(forResource: filename, withExtension: "extension_of_filename")
+let url = Bundle.main.url(forResource: file_name, withExtension: "extension_of_file_name")
 
 player = try! AVAudioPlayer(contentsOf: url!)
 
