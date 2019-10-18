@@ -26,6 +26,6 @@ timer.invalidate()
 
 self.performSegue(withIdentifier: "Identifier_Name", sender: self) //Inside the function that will trigger next screen
 
-override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-  perform operations
+override func prepare(for segue: UIStoryboardSegue, sender: Any?) {<br />
+  perform operations<br />
 }
