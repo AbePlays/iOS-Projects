@@ -27,5 +27,10 @@ timer.invalidate()
 self.performSegue(withIdentifier: "Identifier_Name", sender: self) //Inside the function that will trigger next screen
 
 override func prepare(for segue: UIStoryboardSegue, sender: Any?) {<br />
-&emsp;perform operations<br />
+&emsp;if segue.identifier == "firstToSecond" {<br />
+&emsp;&emsp;let destinationVC = segue.destination as! ResultsViewController<br />
+&emsp;&emsp;destinationVC.perHead = resultTo2DecimalPlaces
+&emsp;&emsp;destinationVC.person = String(numberOfPeople)
+&emsp;&emsp;destinationVC.tipPercent = String(tip * 100)
+&emsp;}<br />
 }
