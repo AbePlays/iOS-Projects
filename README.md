@@ -37,19 +37,19 @@ override func prepare(for segue: UIStoryboardSegue, sender: Any?) {<br />
 
 if let url = URL(string: urlString) {<br />
             
-            &emsp;let session = URLSession(configuration: .default)<br />
+&emsp;let session = URLSession(configuration: .default)<br />
             
-            &emsp;let task = session.dataTask(with: url) { (data, response, error) in<br />
-                &emsp;&emsp;if error != nil {<br />
-                    &emsp;&emsp;&emsp;self.delegate?.didFailWithError(error: error!)<br />
-                    &emsp;&emsp;&emsp;return
-                &emsp;&emsp;}
+&emsp;let task = session.dataTask(with: url) { (data, response, error) in<br />
+&emsp;&emsp;if error != nil {<br />
+&emsp;&emsp;&emsp;self.delegate?.didFailWithError(error: error!)<br />
+&emsp;&emsp;&emsp;return
+&emsp;&emsp;}
                 
-                &emsp;&emsp;if let safedata = data {<br />
-                    &emsp;&emsp;&emsp;if let weather = self.parseJSON(safedata) {<br />
-                        &emsp;&emsp;&emsp;&emsp;self.delegate?.didUpdateWeather(self, weather: weather)<br />
-                    &emsp;&emsp;&emsp;}<br />
-                &emsp;&emsp;}<br />
-            &emsp;&emsp;}<br />
-            &emsp;task.resume()<br />
-        }
+&emsp;&emsp;if let safedata = data {<br />
+&emsp;&emsp;&emsp;if let weather = self.parseJSON(safedata) {<br />
+&emsp;&emsp;&emsp;&emsp;self.delegate?.didUpdateWeather(self, weather: weather)<br />
+&emsp;&emsp;&emsp;}<br />
+&emsp;&emsp;}<br />
+&emsp;&emsp;}<br />
+&emsp;task.resume()<br />
+}
