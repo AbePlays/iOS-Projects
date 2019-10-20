@@ -42,7 +42,7 @@ if let url = URL(string: urlString) {<br />
 &emsp;let task = session.dataTask(with: url) { (data, response, error) in<br />
 &emsp;&emsp;if error != nil {<br />
 &emsp;&emsp;&emsp;self.delegate?.didFailWithError(error: error!)<br />
-&emsp;&emsp;&emsp;return
+&emsp;&emsp;&emsp;return<br />
 &emsp;&emsp;}
                 
 &emsp;&emsp;if let safedata = data {<br />
