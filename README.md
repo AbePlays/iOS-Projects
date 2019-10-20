@@ -50,6 +50,6 @@ if let url = URL(string: urlString) {<br />
 &emsp;&emsp;&emsp;&emsp;self.delegate?.didUpdateWeather(self, weather: weather)<br />
 &emsp;&emsp;&emsp;}<br />
 &emsp;&emsp;}<br />
-&emsp;&emsp;}<br />
+&emsp;}<br />
 &emsp;task.resume()<br />
 }
