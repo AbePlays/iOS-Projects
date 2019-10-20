@@ -48,7 +48,8 @@ if let url = URL(string: urlString) {<br />
 &emsp;&emsp;if let safedata = data {<br />
 &emsp;&emsp;&emsp;if let weather = self.parseJSON(safedata) {<br />
 &emsp;&emsp;&emsp;&emsp;self.delegate?.didUpdateWeather(self, weather: weather)<br />
-&emsp;&emsp;&emsp;}<br />
+&emsp;&emsp;&emsp;<br />
+&emsp;&emsp;}<br />
 &emsp;&emsp;}<br />
 &emsp;}<br />
 &emsp;task.resume()<br />
