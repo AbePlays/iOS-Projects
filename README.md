@@ -53,3 +53,37 @@ if let url = URL(string: urlString) {<br />
 &emsp;}<br />
 &emsp;task.resume()<br />
 }
+
+## Working With CoreML 🤖
+
+import CoreML<br />
+
+&emsp;func detect(image: CIImage) {<br />
+&emsp;&emsp;guard let model = try? VNCoreMLModel(for: Inceptionv3().model) else {<br />
+&emsp;&emsp;&emsp;fatalError("Loading CoreML Model Failed.")<br />
+&emsp;&emsp;}<br />
+        
+&emsp;&emsp;let request = VNCoreMLRequest(model: model) { (request, error) in<br />
+&emsp;&emsp;&emsp;guard let results = request.results as? [VNClassificationObservation] else {<br />
+&emsp;&emsp;&emsp;&emsp;fatalError("Model failed to process image.")<br />
+&emsp;&emsp;&emsp;}<br />
+            
+&emsp;&emsp;&emsp;if let firstResult = results.first {<br />
+&emsp;&emsp;&emsp;&emsp;if firstResult.identifier.contains("hotdog") {<br />
+&emsp;&emsp;&emsp;&emsp;&emsp;self.navigationItem.title = "It's a Hotdog"<br />
+&emsp;&emsp;&emsp;&emsp;} else {<br />
+&emsp;&emsp;&emsp;&emsp;&emsp;self.navigationItem.title = "Not a Hotdog"<br />
+&emsp;&emsp;&emsp;&emsp;}<br />
+&emsp;&emsp;&emsp;}<br />
+&emsp;&emsp;}<br />
+        
+&emsp;&emsp;let handler = VNImageRequestHandler(ciImage: image)<br />
+        
+&emsp;&emsp;do {<br />
+&emsp;&emsp;&emsp;try handler.perform([request])<br />
+&emsp;&emsp;}<br />
+&emsp;&emsp;catch {<br />
+&emsp;&emsp;&emsp;print(error)<br />
+&emsp;&emsp;}<br />
+        
+&emsp;}
