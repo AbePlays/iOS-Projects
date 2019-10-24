@@ -1,4 +1,5 @@
 import Foundation
+import UIKit
 
 struct QuizBrain {
     
@@ -38,15 +39,23 @@ struct QuizBrain {
         return Float(questionNumber) / Float(quiz.count)
     }
     
-    mutating func nextQuestion() {
+    mutating func nextQuestion() -> Int {
         questionNumber = questionNumber + 1
         
         if(questionNumber == quiz.count) {
-            questionNumber = 0
+            questionNumber = questionNumber - 1
+            return 0
         }
+        
+        return 1
     }
     
     func getScore() -> Int {
             return correctAnswer
+    }
+    
+    mutating func startOver() {
+        questionNumber = 0
+        correctAnswer = 0
     }
 }
