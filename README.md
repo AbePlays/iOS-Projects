@@ -15,7 +15,7 @@ player.play()
 ## Detecting Shaking Gesture 👋🏻
 
 override func motionEnded(_ motion: UIEvent.EventSubtype, with event: UIEvent?) { <br />
-&emsp;//Write_Code <br \>
+&emsp;//Write_Code <br />
 }
 
 ## How To Use A Timer  ⏳
