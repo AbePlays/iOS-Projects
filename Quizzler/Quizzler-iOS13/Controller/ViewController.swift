@@ -2,8 +2,6 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    
-    
     @IBOutlet weak var scoreLabel: UILabel!
     @IBOutlet weak var questionLabel: UILabel!
     @IBOutlet weak var progressBar: UIProgressView!
@@ -30,7 +28,20 @@ class ViewController: UIViewController {
             sender.backgroundColor = UIColor.red
         }
         
-        quizBrain.nextQuestion()
+        let result = quizBrain.nextQuestion()
+        
+        if result == 0 {
+            let alert = UIAlertController(title: "Awesome", message: "You've finished with the questions. Do you want to start over?", preferredStyle: .alert)
+            
+            let restartAction = UIAlertAction(title: "Restart", style: .default) { (UIAlertAction) in
+                self.quizBrain.startOver()
+                self.updateUI()
+            }
+            
+            alert.addAction(restartAction)
+            
+            present(alert, animated: true, completion: nil)
+        }
         
         Timer.scheduledTimer(timeInterval: 0.2, target:self, selector: #selector(updateUI), userInfo:nil, repeats: false)
 
