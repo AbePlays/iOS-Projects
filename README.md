@@ -95,3 +95,11 @@ import CoreML<br />
 &emsp;}
 
 ## Working With ARKit 📱
+
+## Adding Firebase To The Project 🔥
+
+import Firebase
+
+FirebaseApp.configure()
+
+let myDatabase = Database.database().reference()
