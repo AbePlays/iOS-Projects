@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina6_1" orientation="landscape" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -12,34 +12,72 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Rock_Paper_Scissor" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Fancy A Game ?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Xw-nY-Jhh">
-                                <rect key="frame" x="62" y="123" width="290" height="51"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="42"/>
-                                <color key="textColor" red="0.42352941176470588" green="0.4823529411764706" blue="0.58431372549019611" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="back" translatesAutoresizingMaskIntoConstraints="NO" id="3qG-5J-O3T">
-                                <rect key="frame" x="62" y="282" width="290" height="200"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xwf-IZ-cD1">
-                                <rect key="frame" x="121" y="644" width="173" height="55"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.54509803921568623" green="0.72941176470588232" blue="0.73333333333333328" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="36"/>
-                                <state key="normal" title="Lets Duel">
-                                    <color key="titleColor" red="0.42352941176470588" green="0.4823529411764706" blue="0.58431372549019611" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="startButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yyO-sj-GEa"/>
-                                </connections>
-                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Bvg-Xc-G6B">
+                                <rect key="frame" x="44" y="0.0" width="808" height="393"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pHg-CY-Dh8" userLabel="Top View">
+                                        <rect key="frame" x="0.0" y="0.0" width="808" height="125.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fancy A Game ?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Xw-nY-Jhh">
+                                                <rect key="frame" x="259.5" y="37.5" width="289.5" height="50.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="42"/>
+                                                <color key="textColor" red="0.42352941176470588" green="0.4823529411764706" blue="0.58431372549019611" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="3Xw-nY-Jhh" firstAttribute="centerY" secondItem="pHg-CY-Dh8" secondAttribute="centerY" id="6e5-5J-Kn1"/>
+                                            <constraint firstItem="3Xw-nY-Jhh" firstAttribute="centerX" secondItem="pHg-CY-Dh8" secondAttribute="centerX" id="7iV-Ip-WHH"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OVf-6j-nKd" userLabel="Middle View">
+                                        <rect key="frame" x="0.0" y="133.5" width="808" height="126"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="back" translatesAutoresizingMaskIntoConstraints="NO" id="3qG-5J-O3T">
+                                                <rect key="frame" x="298" y="3.5" width="212" height="119"/>
+                                            </imageView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="3qG-5J-O3T" firstAttribute="centerX" secondItem="OVf-6j-nKd" secondAttribute="centerX" id="3uW-7r-eVk"/>
+                                            <constraint firstItem="3qG-5J-O3T" firstAttribute="centerY" secondItem="OVf-6j-nKd" secondAttribute="centerY" id="6aG-Cf-OmC"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xt1-4D-6Ph" userLabel="Bottom View">
+                                        <rect key="frame" x="0.0" y="267.5" width="808" height="125.5"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xwf-IZ-cD1">
+                                                <rect key="frame" x="304" y="35" width="200" height="55"/>
+                                                <color key="backgroundColor" red="0.54509803921568623" green="0.72941176470588232" blue="0.73333333333333328" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="Dbt-ry-SjO"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="36"/>
+                                                <state key="normal" title="Lets Duel">
+                                                    <color key="titleColor" red="0.42352941176470588" green="0.4823529411764706" blue="0.58431372549019611" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="startButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yyO-sj-GEa"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="xwf-IZ-cD1" firstAttribute="centerY" secondItem="xt1-4D-6Ph" secondAttribute="centerY" id="6Hk-yg-UbK"/>
+                                            <constraint firstItem="xwf-IZ-cD1" firstAttribute="centerX" secondItem="xt1-4D-6Ph" secondAttribute="centerX" id="BKy-ny-ze7"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" red="0.27450980392156865" green="0.25490196078431371" blue="0.34901960784313724" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="Bvg-Xc-G6B" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="Exx-wQ-n30"/>
+                            <constraint firstItem="Bvg-Xc-G6B" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="J4N-HQ-BJP"/>
+                            <constraint firstItem="Bvg-Xc-G6B" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="te6-q1-OBA"/>
+                            <constraint firstItem="Bvg-Xc-G6B" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="xOh-Nf-SIs"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
