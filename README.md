@@ -39,6 +39,9 @@ override func prepare(for segue: UIStoryboardSegue, sender: Any?) {<br />
 &emsp;}<br />
 }
 
+//Inside the function through which one wants to go back<br />
+dismiss(animated: true, completion: nil)<br />
+
 ## Handling APIs ⚙️
 
 if let url = URL(string: urlString) {<br />
