@@ -42,6 +42,11 @@ override func prepare(for segue: UIStoryboardSegue, sender: Any?) {<br />
 //Inside the function through which one wants to go back<br />
 dismiss(animated: true, completion: nil)<br />
 
+## Make Application Dark Mode Compatible 🌑
+
+Use System Colors for text and icons(SFIcons) <br />
+For images, in assets folder, allocate different images for all 3 appearances(any, light and dark) <br />
+
 ## Handling APIs ⚙️
 
 if let url = URL(string: urlString) {<br />
