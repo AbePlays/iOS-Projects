@@ -54,8 +54,7 @@ For images, in assets folder, allocate different images for all 3 appearances(an
 if let url = URL(string: nameOfUrl) {<br />
 <br />
 //2. Create a URLSession<br />
-<br />
-            
+<br />            
 &emsp;let session = URLSession(configuration: .default)<br />
             
 &emsp;let task = session.dataTask(with: url) { (data, response, error) in<br />
