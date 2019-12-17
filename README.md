@@ -55,7 +55,8 @@ if let url = URL(string: nameOfUrl) {<br />
 <br />
 //2. Create a URLSession<br />           
 &emsp;let session = URLSession(configuration: .default)<br />
-            
+<br />
+//3. Give Session a task<br />
 &emsp;let task = session.dataTask(with: url) { (data, response, error) in<br />
 &emsp;&emsp;if error != nil {<br />
 &emsp;&emsp;&emsp;self.delegate?.didFailWithError(error: error!)<br />
@@ -68,6 +69,7 @@ if let url = URL(string: nameOfUrl) {<br />
 &emsp;&emsp;&emsp;}<br />
 &emsp;&emsp;}<br />
 &emsp;}<br />
+//4. Start the task<br />
 &emsp;task.resume()<br />
 }
 
