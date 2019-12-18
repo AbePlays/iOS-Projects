@@ -74,7 +74,7 @@ if let url = URL(string: nameOfUrl) {<br />
 }<br />
 While the data is being fetched from the server, the UI should not be static i.e., It should be responsive and not be frozen. <br /> <br />
 DispatchQueue.main.async {<br />
-&emsp //CODE<br />
+&emsp; //CODE<br />
 }<br />
 
 ## Working With CoreML 🤖
