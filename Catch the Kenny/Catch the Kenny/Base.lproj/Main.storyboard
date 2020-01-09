@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Catch_the_Kenny" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Mar-53-sfw">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wqV-QX-PYX" userLabel="Top">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="122"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="wmJ-iq-tJO">
+                                                <rect key="frame" x="148" y="20" width="118" height="82"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time : 10" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Jt-Y9-OGS">
+                                                        <rect key="frame" x="0.0" y="0.0" width="118" height="36"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score : 0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M8A-Fz-64Z">
+                                                        <rect key="frame" x="21" y="46" width="76" height="36"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="wmJ-iq-tJO" firstAttribute="centerY" secondItem="wqV-QX-PYX" secondAttribute="centerY" id="Me4-gU-eTh"/>
+                                            <constraint firstItem="wmJ-iq-tJO" firstAttribute="top" secondItem="wqV-QX-PYX" secondAttribute="top" constant="20" id="OxF-YS-goI"/>
+                                            <constraint firstItem="wmJ-iq-tJO" firstAttribute="centerX" secondItem="wqV-QX-PYX" secondAttribute="centerX" id="nkM-Ad-sRt"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kf5-2d-3u3" userLabel="Middle">
+                                        <rect key="frame" x="0.0" y="142" width="414" height="553"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Kenny" translatesAutoresizingMaskIntoConstraints="NO" id="zpj-Eu-UOG">
+                                                <rect key="frame" x="19" y="9" width="99" height="143"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Kenny" translatesAutoresizingMaskIntoConstraints="NO" id="l0W-4G-TS7">
+                                                <rect key="frame" x="157" y="9" width="99" height="143"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Kenny" translatesAutoresizingMaskIntoConstraints="NO" id="Wpk-Ae-Tlv">
+                                                <rect key="frame" x="294" y="9" width="99" height="143"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Kenny" translatesAutoresizingMaskIntoConstraints="NO" id="oHn-ZZ-5DX">
+                                                <rect key="frame" x="20" y="182" width="99" height="142"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Kenny" translatesAutoresizingMaskIntoConstraints="NO" id="WCd-Bl-LbK">
+                                                <rect key="frame" x="157" y="182" width="99" height="142"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Kenny" translatesAutoresizingMaskIntoConstraints="NO" id="E6o-bY-pIv">
+                                                <rect key="frame" x="294" y="182" width="99" height="142"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Kenny" translatesAutoresizingMaskIntoConstraints="NO" id="7rn-rH-Tgm">
+                                                <rect key="frame" x="20" y="362" width="99" height="143"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Kenny" translatesAutoresizingMaskIntoConstraints="NO" id="2cy-0x-04S">
+                                                <rect key="frame" x="158" y="362" width="99" height="143"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Kenny" translatesAutoresizingMaskIntoConstraints="NO" id="Vwf-fF-2Sg">
+                                                <rect key="frame" x="295" y="362" width="99" height="143"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                        </subviews>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RxB-EW-gXj" userLabel="Bottom">
+                                        <rect key="frame" x="0.0" y="715" width="414" height="103"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HighScore : 0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OFu-xJ-stK">
+                                                <rect key="frame" x="149" y="40" width="116" height="23"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="OFu-xJ-stK" secondAttribute="bottom" constant="40" id="JOb-d3-kNf"/>
+                                            <constraint firstItem="OFu-xJ-stK" firstAttribute="centerX" secondItem="RxB-EW-gXj" secondAttribute="centerX" id="KFB-6Q-QTD"/>
+                                            <constraint firstItem="OFu-xJ-stK" firstAttribute="centerY" secondItem="RxB-EW-gXj" secondAttribute="centerY" id="zp8-Eg-F16"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Mar-53-sfw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="4p1-LP-MEg"/>
+                            <constraint firstItem="Mar-53-sfw" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="sxf-0V-7Oh"/>
+                            <constraint firstItem="Mar-53-sfw" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="uKA-N9-gpR"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Mar-53-sfw" secondAttribute="bottom" id="zx2-cL-Pcu"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="highScoreLabel" destination="OFu-xJ-stK" id="RbS-xu-qND"/>
+                        <outlet property="kenny1" destination="zpj-Eu-UOG" id="Igv-lb-VZM"/>
+                        <outlet property="kenny2" destination="l0W-4G-TS7" id="Xyw-W9-5NO"/>
+                        <outlet property="kenny3" destination="Wpk-Ae-Tlv" id="nl4-My-QwW"/>
+                        <outlet property="kenny4" destination="oHn-ZZ-5DX" id="NMz-qC-L1e"/>
+                        <outlet property="kenny5" destination="WCd-Bl-LbK" id="7UN-xc-56F"/>
+                        <outlet property="kenny6" destination="E6o-bY-pIv" id="tpn-Lu-2Qs"/>
+                        <outlet property="kenny7" destination="7rn-rH-Tgm" id="ZgM-V9-rPb"/>
+                        <outlet property="kenny8" destination="2cy-0x-04S" id="MjW-Up-ZrE"/>
+                        <outlet property="kenny9" destination="Vwf-fF-2Sg" id="Q8I-oA-UY6"/>
+                        <outlet property="scoreLabel" destination="M8A-Fz-64Z" id="oM0-1w-7b9"/>
+                        <outlet property="timeLabel" destination="9Jt-Y9-OGS" id="086-CJ-5zo"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="27.536231884057973" y="72.321428571428569"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Kenny" width="272" height="366"/>
+    </resources>
+</document>
