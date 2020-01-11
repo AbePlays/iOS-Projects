@@ -123,3 +123,20 @@ FirebaseApp.configure()
 
 let myDatabase = Database.database().reference()
 //More to come
+
+## Working With TableViewController 🀆
+
+Provide an Identifer to the Prototype Cell.
+
+-----TableView Datasource Methods-----
+
+Step 1. Check for a function which returns "number of rows in section"
+Step 2. Check for a function which asks for "cell for row at" a particular position
+
+--Implementation of Functions--
+
+FUNCTION 1 :
+  return the length of data.
+  
+FUNCTION 2 :
+  Create a cell, configure it and return the cell.
