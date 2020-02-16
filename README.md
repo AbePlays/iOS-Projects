@@ -147,14 +147,14 @@ Import MapKit and inherit MKMapViewDelegate.
 
 Set current ViewController as the delegate.
 
-Create an instance of LocationManager.
+Create an instance of LocationManager.<br/>
   Set accuracy measure, ask for authentication and start updating location.
   
-Implement a delegate function(didUpdateLocations)
-  Set the latitude and longitude using CLLocationCoordinate2D
-  Set the span aka zoom.
-  Set the region.
-  Add span and region to the map.
+Implement a delegate function(didUpdateLocations)<br/>
+  Set the latitude and longitude using CLLocationCoordinate2D<br/>
+  Set the span aka zoom.<br/>
+  Set the region.<br/>
+  Add span and region to the map.<br/>
 
 
 
