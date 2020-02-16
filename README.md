@@ -140,3 +140,21 @@ FUNCTION 1 :
   
 FUNCTION 2 :
   Create a cell, configure it and return the cell.
+  
+## Working With Maps 🗺
+
+Import MapKit and inherit MKMapViewDelegate.
+
+Set current ViewController as the delegate.
+
+Create an instance of LocationManager.
+  Set accuracy measure, ask for authentication and start updating location.
+  
+Implement a delegate function(didUpdateLocations)
+  Set the latitude and longitude using CLLocationCoordinate2D
+  Set the span aka zoom.
+  Set the region.
+  Add span and region to the map.
+
+
+
