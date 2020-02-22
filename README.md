@@ -157,6 +157,12 @@ Implement a delegate function(didUpdateLocations)<br/>
   Add span and region to the map.<br/>
   
 ## Working With Database 📚
+  
+  Import CoreData.<br/>
+  Create an AppDelegate instance.<br/>
+  Create a new dataObject using NSEntityDescription.insertNewObject(forEntityName: <Name of Entity>, into: <Something>).<br/>
+  Initialize all fields of the entity using setValue function.<br/>
+  Save data using context.save() function.<br/>
 
 ## Tips & Tricks
 
