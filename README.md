@@ -158,11 +158,20 @@ Implement a delegate function(didUpdateLocations)<br/>
   
 ## Working With Database 📚
   
+### Insering data inside the database
+
   Import CoreData.<br/>
   Create an AppDelegate instance.<br/>
   Create a new dataObject using NSEntityDescription.insertNewObject(forEntityName: <Name of Entity>, into: <Something>).<br/>
   Initialize all fields of the entity using setValue function.<br/>
   Save data using context.save() function.<br/>
+  
+### Retreiving data from the database
+
+  Import CoreData.<br/>
+  Create an AppDelegate instance.<br/>
+  Create a fetchRequest using NSFetchRequest<NSFetchRequestResult>(entityName: "<Entity Name>")
+  Fetch the data from database using context.fetch(fetchRequest) method.
 
 ## Tips & Tricks
 
