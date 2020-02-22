@@ -160,10 +160,10 @@ Implement a delegate function(didUpdateLocations)<br/>
 
 ## Tips & Tricks
 
-# Dismiss Keyboard : 
+### Dismiss Keyboard : 
   Create TapGestureRecognizer and put view.endEditing inside it.
   
-# Pick an Image : 
+### Pick an Image : 
   
 
 
