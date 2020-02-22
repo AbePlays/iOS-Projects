@@ -164,6 +164,12 @@ Implement a delegate function(didUpdateLocations)<br/>
   Create TapGestureRecognizer and put view.endEditing inside it.
   
 ### Pick an Image : 
+  Implement UIImagePickerControllerDelegate, UINavigationControllerDelegate to the UIViewController<br/>
+  Initialize a UIImagePickerController object.<br/>
+  Set the object as the delegate.<br/>
+  Pick the source type.<br/>
+  Present the Object into the screen.<br/>
+  Using a delegate function(didFinishPickingMedia), save the image from the source.
   
 
 
