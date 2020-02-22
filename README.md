@@ -158,7 +158,13 @@ Implement a delegate function(didUpdateLocations)<br/>
   
 ## Working With Database 📚
 
+## Tips & Tricks
 
+# Dismiss Keyboard : 
+  Create TapGestureRecognizer and put view.endEditing inside it.
+  
+# Pick an Image : 
+  
 
 
 
