@@ -170,8 +170,14 @@ Implement a delegate function(didUpdateLocations)<br/>
 
   Import CoreData.<br/>
   Create an AppDelegate instance.<br/>
-  Create a fetchRequest using NSFetchRequest<NSFetchRequestResult>(entityName: "<Entity Name>")
-  Fetch the data from database using context.fetch(fetchRequest) method.
+  Create a fetchRequest using NSFetchRequest<NSFetchRequestResult>(entityName: "<Entity Name>")<br/>
+  Fetch the data from database using context.fetch(fetchRequest) method.<br/>
+  
+### Deleting data from the database
+
+  Retreive the data using aforementioned step using UUID.<br/>
+  context.delete(record)<br/>
+  context.save()<br/>
 
 ## Tips & Tricks
 
