@@ -182,15 +182,22 @@ Implement a delegate function(didUpdateLocations)<br/>
 ## Tips & Tricks
 
 ### Dismiss Keyboard : 
+
   Create TapGestureRecognizer and put view.endEditing inside it.
   
 ### Pick an Image : 
+
   Implement UIImagePickerControllerDelegate, UINavigationControllerDelegate to the UIViewController<br/>
   Initialize a UIImagePickerController object.<br/>
   Set the object as the delegate.<br/>
   Pick the source type.<br/>
   Present the Object into the screen.<br/>
   Using a delegate function(didFinishPickingMedia), save the image from the source.
+  
+### Force a particular appearance :
+
+  Inside viewDidLoad<br/>
+  overrideUserInterfaceStyle = .dark OR .light
   
 
 
