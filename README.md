@@ -122,6 +122,21 @@ import Firebase
 FirebaseApp.configure()
 
 let myDatabase = Database.database().reference()
+
+### Creating Users
+
+    if emailView.text != "" && passwordView.text != "" {
+        Auth.auth().createUser(withEmail: emailView.text!, password: passwordView.text!) { (data, error) in
+            if error != nil {
+                self.showAlert(title: "Error", message: error?.localizedDescription ?? "Error from firebase")
+            } else {
+                //Do Stuff
+            }
+        }
+    } else {
+      //Do Stuff
+    }
+
 //More to come
 
 ## Working With TableViewController 🀆
