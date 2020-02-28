@@ -179,13 +179,13 @@ let myDatabase = Database.database().reference()
                         let firebaseDatabase = Firestore.firestore()
                         var firestoreReference : DocumentReference? = nil
 
-                        let post = ["imageURL" : imageURL!, "postedBy" : Auth.auth().currentUser!.email!, "postComment" : self.commentView.text!, "date" : "date", "likes" : 0] as [String:Any]
+                        let post = ["imageURL" : imageURL!, "postedBy" : Auth.auth().currentUser!.email!, "postComment" : self.commentView.text!, "date" : FieldValue.serverTimestamp(), "likes" : 0] as [String:Any]
 
                         firestoreReference = firebaseDatabase.collection("Posts").addDocument(data: post, completion: { (error) in
                             if error != nil {
                                 //Error
                             } else {
-
+                                //Perform Something
                             }
                         })
 
