@@ -226,6 +226,14 @@ let myDatabase = Database.database().reference()
         }
     }
   }
+  
+### Changing particular data of a particular group
+
+    let firestoreDatabase = Firestore.firestore()
+    if let likes = Int(likeCount.text!) {
+        let likeDict = ["likes" : likes + 1] as [String : Any]
+        firestoreDatabase.collection("Posts").document(documentIdLabel.text!).setData(likeDict, merge: true)
+    }
     
 ### Remembering User
 
