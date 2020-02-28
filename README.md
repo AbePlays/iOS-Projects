@@ -137,7 +137,7 @@ let myDatabase = Database.database().reference()
       //Do Stuff
     }
     
-### Signing In Users
+### Signing In User
 
     if emailView.text != "" && passwordView.text != "" {
         Auth.auth().signIn(withEmail: emailView.text!, password: passwordView.text!) { (data, error) in
@@ -150,6 +150,10 @@ let myDatabase = Database.database().reference()
     } else {
       //Do Stuff
     }
+    
+### Signing Out User
+
+    Auth.auth().signOut()
     
 ### Remembering User
 
