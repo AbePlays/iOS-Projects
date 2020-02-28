@@ -155,6 +155,46 @@ let myDatabase = Database.database().reference()
 
     Auth.auth().signOut()
     
+### Uploading Media to Firestore
+
+    let storage = Storage.storage()
+    let storageReference = storage.reference()
+
+    let mediaFolder = storageReference.child("media") //Selecting a Folder inside the database(Here "media")
+
+    if let data = imageView.image?.jpegData(compressionQuality: 0.5) {
+        let id = UUID().uuidString
+        let imageReference = mediaFolder.child("\(id).jpg") //Saving media using a UUID
+        imageReference.putData(data, metadata: nil) { (storageData, error) in
+            if error != nil {
+              //Error
+            } else {
+                imageReference.downloadURL { (url, error) in
+                    if error != nil {
+                        //Error
+                    } else {
+                        let imageURL = url?.absoluteString
+
+                        // DATABASE
+                        let firebaseDatabase = Firestore.firestore()
+                        var firestoreReference : DocumentReference? = nil
+
+                        let post = ["imageURL" : imageURL!, "postedBy" : Auth.auth().currentUser!.email!, "postComment" : self.commentView.text!, "date" : "date", "likes" : 0] as [String:Any]
+
+                        firestoreReference = firebaseDatabase.collection("Posts").addDocument(data: post, completion: { (error) in
+                            if error != nil {
+                                //Error
+                            } else {
+
+                            }
+                        })
+
+                    }
+                }
+            }
+        }
+    }
+    
 ### Remembering User
 
   Inside SceneDelegate :<br/>
