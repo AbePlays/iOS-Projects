@@ -150,6 +150,17 @@ let myDatabase = Database.database().reference()
     } else {
       //Do Stuff
     }
+    
+### Remembering User
+
+  Inside SceneDelegate :<br/>
+  
+    let user = Auth.auth().currentUser
+    if user != nil {
+        let board = UIStoryboard(name: "Main", bundle: nil)
+        let tabBar = board.instantiateViewController(identifier: "tabBar") as! UITabBarController
+        window?.rootViewController = tabBar
+    }
 
 //More to come
 
