@@ -194,6 +194,39 @@ let myDatabase = Database.database().reference()
         }
     }
     
+### Retreiving data from firestore
+
+    func getDataFromFirestore() {
+      let firestoreDatabase = Firestore.firestore()
+      firestoreDatabase.collection("Posts").addSnapshotListener { (snapshot, error) in
+        if error != nil {
+
+        } else {
+            if snapshot?.isEmpty == false && snapshot != nil {
+                self.emails.removeAll()
+                self.comments.removeAll()
+                self.likes.removeAll()
+                self.images.removeAll()
+                for document in snapshot!.documents {
+                    if let email = document.get("postedBy") as? String {
+                        self.emails.append(email)
+                    }
+                    if let comment = document.get("postComment") as? String {
+                        self.comments.append(comment)
+                    }
+                    if let like = document.get("likes") as? Int {
+                        self.likes.append(like)
+                    }
+                    if let image = document.get("imageURL") as? String {
+                        self.images.append(image)
+                    }
+                }
+                self.tableView.reloadData()
+            }
+        }
+    }
+  }
+    
 ### Remembering User
 
   Inside SceneDelegate :<br/>
