@@ -14,9 +14,9 @@
 
 ## Detecting Shaking Gesture 👋🏻
 
-override func motionEnded(_ motion: UIEvent.EventSubtype, with event: UIEvent?) { <br />
-&emsp;//Write_Code <br />
-}
+    override func motionEnded(_ motion: UIEvent.EventSubtype, with event: UIEvent?) {
+      //Write_Code
+    }
 
 ## How To Use A Timer  ⏳
 
@@ -39,7 +39,7 @@ override func motionEnded(_ motion: UIEvent.EventSubtype, with event: UIEvent?) 
       }
     }
 
-  Inside the function through which one wants to go back<br />
+  Inside the function through which one wants to go back<br/>
     dismiss(animated: true, completion: nil)
 
 ## Make Application Dark Mode Compatible 🌑
