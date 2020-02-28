@@ -188,7 +188,6 @@ let myDatabase = Database.database().reference()
                                 //Perform Something
                             }
                         })
-
                     }
                 }
             }
@@ -302,6 +301,10 @@ Implement a delegate function(didUpdateLocations)<br/>
 
   Inside viewDidLoad<br/>
   overrideUserInterfaceStyle = .dark OR .light
+  
+### Jump between tabs :
+
+  self.tabBarController?.selectedIndex = index
   
 
 
