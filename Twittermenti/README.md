@@ -3,8 +3,8 @@
 ## Screenshots
 
 <div align="center">
-  <img src="./home1.png" width="49%" height="300px"/>
-  <img src="./home2.png" width="49%" height="300px"/>
+  <img src="./home1.png" width="400"/>
+  <img src="./home2.png" width="400"/>
 </div>
 
 ## Overview
