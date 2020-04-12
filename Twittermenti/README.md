@@ -2,7 +2,7 @@
 
 ## Screenshots
 
-<div align="center">
+<div align="center" display="flex">
   <img src="./home1.png"/>
   <img src="./home2.png"/>
 </div>
