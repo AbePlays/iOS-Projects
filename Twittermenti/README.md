@@ -9,7 +9,7 @@
 
 ## Overview
 
-Twitter Sentiment Classifier is an app built using Swift and CoreML! A app fetches latest 100 tweets from twitter for a particular keyword provided by the user and displays the result depending upon the tweets submitted by people all around the globe. The app incorporates:
+Twittermenti is an app built using Swift and CoreML! The app fetches latest 100 tweets from twitter for a particular keyword provided by the user and displays the public sentiment towards the keyword by evaluating the tweets using a Machine Learning Model. The app incorporates:
 
 - Swift
 - CoreML
