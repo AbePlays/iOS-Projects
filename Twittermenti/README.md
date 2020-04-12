@@ -2,9 +2,9 @@
 
 ## Screenshots
 
-<div align="center" display="flex">
-  <img src="./home1.png"/>
-  <img src="./home2.png"/>
+<div align="center">
+  <img src="./home1.png" width="49%" height="300px"/>
+  <img src="./home2.png" width="49%" height="300px"/>
 </div>
 
 ## Overview
